@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors"); // Import the cors package
 const app = express();
 
 app.use(
@@ -12,6 +13,8 @@ app.use(
     },
   })
 );
+
+app.use(cors()); // Enable CORS for all routes
 
 var coinbase = require("coinbase-commerce-node");
 var Client = coinbase.Client;
