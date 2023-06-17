@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const cors = require("cors"); // Import the cors package
+const cors = require("cors");
 const app = express();
 
 app.use(
@@ -29,8 +29,8 @@ app.post("/checkout", async (req, res) => {
 
   try {
     const charge = await resources.Charge.create({
-      name: "Bale Charge",
-      description: "Bale charge description",
+      name: "Bale Store",
+      description: "Shop Smarter, Save More!",
       local_price: {
         amount: amount,
         currency: currency,
